@@ -201,8 +201,7 @@ that it can be used to generate simulated Illumina reads.<br>
 5.update & support
 ======
 
-	please refer to https://github.com/xwBio/RRBSsim 	
-	or email to xwsun@zju.edu.cn
+please refer to https://github.com/xwBio/RRBSsim or email to xwsun@zju.edu.cn
 
 
 
