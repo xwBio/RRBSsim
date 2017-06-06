@@ -3,7 +3,7 @@ RRBSsim
 RRBSsim: reduced representation bisulfite sequencing simulator for next-generation sequencing
 ====
 
-1. Introduction
+1.Introduction
 ==============
 
 RRBSsim can produce paired-end RRBS reads, with significant attributes of real data, such as<br> 
@@ -19,7 +19,7 @@ enzyme (e.g., MspI) in silico and the position of generated fragments is marked.
 (iiii) Sequencing error profile: we produce an empirical error profile from enough large training datasets<br>
 that it can be used to generate simulated Illumina reads.<br>
 
-2. System requirements
+2.System requirements
 ============
 
 * Linux/Unix or Mac OS platform
@@ -32,9 +32,10 @@ that it can be used to generate simulated Illumina reads.<br>
   
 * [pyfasta](http://pypi.python.org/pypi/pyfasta/) package (Version 0.5.2)
 
-3. Usage :
+3.Usage :
+=====
 
-         $ python RRBSsim.py -h
+        	$ python RRBSsim.py -h
          	Usage: RRBSsim.py [options]
 	
 		General:			
@@ -117,7 +118,8 @@ that it can be used to generate simulated Illumina reads.<br>
 		--phred64_quals     	FastQ qualities are ASCII transformation of that Phred quality plus 64. Default: off.
                         		
 
-4. Example :
+4.Example :
+=======
 
  (1) Base quality profiles Generator
 						
@@ -196,7 +198,7 @@ that it can be used to generate simulated Illumina reads.<br>
 		(6) methylation level
 		(7) mutation rate
 			
-5. For update & support, please refer to https://github.com/xwBio/RRBSsim.		
+5.For update & support, please refer to https://github.com/xwBio/RRBSsim.		
 
 
 
