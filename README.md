@@ -33,10 +33,10 @@ that it can be used to generate simulated Illumina reads.<br>
 * [pyfasta](http://pypi.python.org/pypi/pyfasta/) package (Version 0.5.2)
 
 3.Usage :
-=====
+=======
 
-        	$ python RRBSsim.py -h
-         	Usage: RRBSsim.py [options]
+		$python RRBSsim.py -h
+		Usage: RRBSsim.py [options]
 	
 		General:			
 		-h/--help		Output help information.
@@ -56,9 +56,9 @@ that it can be used to generate simulated Illumina reads.<br>
 					Non-directional: reads1 and reads2 can be of all four bisulfite strands.
 					Default: directional.
 		--adapter1          	The ligated adapter sequence of the  first end of RRBS fragments. Default: Illumina universal
-                        	adapter 'ACACTCTTTCCCTACACGACGCTCTTCCGATCT'.
+                        		adapter 'ACACTCTTTCCCTACACGACGCTCTTCCGATCT'.
 		--adapter2          	The ligated adapter sequence of the  second end of RRBS fragments. Default: Illumina universal
-                        	adapter 'GATCGGAAGAGCACACGTCTGAACTCCAGTCAC'.
+                        	a	dapter 'GATCGGAAGAGCACACGTCTGAACTCCAGTCAC'.
 		--non_meth_adapter  	The cytosines of adapters is unmethylated. Default is methylated.
 		--non_meth_end_repair_bases The cytosines of end-repair bases is unmethylated. Default is methylated.
 		--min <int>	        The minimum size-selected fragment length of RRBS library (library size) (>0). Default: 40 bp.
@@ -85,20 +85,20 @@ that it can be used to generate simulated Illumina reads.<br>
 		--mCG_level <float>	mCG methylation level (0~1). Default: 0.65.
 		--mCHG_level <float>	mCHG methylation level (0~1). Default: 0.08.
 		--mCHH_level <float>	mCHH methylation level (0~1). Default: 0.08.
-		--mCGS  <float>	Standard deviation of mCG_level (0~(1-mCG_level)*mCG_level).
+		--mCGS  <float>		Standard deviation of mCG_level (0~(1-mCG_level)*mCG_level).
 					Default: (1-mCG_level)*mCG_level/2.0.
-		--mCHGS <float>	Standard deviation of mCHG_level (0~(1-mCHG_level)*mCHG_level).
+		--mCHGS <float>		Standard deviation of mCHG_level (0~(1-mCHG_level)*mCHG_level).
 					Default: (1-mCHG_level)*mCHG_level/2.0.
-		--mCHHS <float>	Standard deviation of mCHH_level(0~(1-mCHH_level)*mCHH_level).
+		--mCHHS <float>		Standard deviation of mCHH_level(0~(1-mCHH_level)*mCHH_level).
 					Default: (1-mCHH_level)*mCHH_level/2.0.
 		--cr  <float>	    	Cytosines conversion rate [0~1]. Default: 0.998.
 		
 		
 		SNP:
 		-S	                File with SNP information, specifying location and frequency of SNPs.format is:
-                        	Chromosome position	strand	frequency_of_A frequency_of_T frequency_of_C frequency_of_G
-                        	chr10	1	+	0	0.4	0	0.6
-                        	chr10	2	+	0.3	0.2	0.1	0.4
+                        		Chromosome position	strand	frequency_of_A frequency_of_T frequency_of_C frequency_of_G
+                        		chr10	1	+	0	0.4	0	0.6
+                        		chr10	2	+	0.3	0.2	0.1	0.4
 		--non_SNP	        Do not add SNP. Default is add (based on prior probability).
 		--homo_freq <float>	The frequency of homozygous SNPs [0~(1-Z)]. Default: 0.0005.
 		--heter_freq <float>	The frequency of heterozygous SNPs [0~(1-Y)]. Default: 0.001.
@@ -198,8 +198,11 @@ that it can be used to generate simulated Illumina reads.<br>
 		(6) methylation level
 		(7) mutation rate
 			
-5.For update & support, please refer to https://github.com/xwBio/RRBSsim.		
+5.update & support
+======
 
+	please refer to https://github.com/xwBio/RRBSsim 	
+	or email to xwsun@zju.edu.cn
 
 
 
