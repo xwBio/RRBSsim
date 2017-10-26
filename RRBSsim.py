@@ -1,11 +1,10 @@
 # !/usr/bin/env python
-# !/usr/bin/python
 # -*- coding:utf-8 -*-
 
 # =============================================================================================================
 # FILE:  RRBSsim.py
 #
-#        USAGE:  ./RRBSsim.py
+#        USAGE:  RRBSsim.py
 #
 #  DESCRIPTION:  RRBSsim: reduced representation bisulfite sequencing simulator for next-generation sequencing
 #
@@ -1478,14 +1477,14 @@ RRBSsim: reduced representation bisulfite sequencing simulator for next-generati
                                xwsun@zju.edu.cn                                            \n
 ==============================================================================================\n
 
-\nsimRRBS is implemented in the Python language and run in an operating system-independent manner. It can allow users
+\nRRBSsim is implemented in the Python language and run in an operating system-independent manner. It can allow users
  to mimic various methylated level (total methylated level of cytosine, percentage of cytosine that methylated and
  methylated level of total methylcytosines) and bisulfite conversion rate in CpG, CHG and CHH context, respectively. It
  can also simulate genetic variations that are divergent from the reference sequence along with the sequencing error and
 quality distributions. In the output, both directional/non-directional, various read length, single/paired-end reads and
 alignment data in the SAM format can be generated. BSSim is a cross-platform BS-seq simulator offers output read
  datasets not only suitable for Illumina's Solexa, but also for Roche's 454 and Applied Biosystems' SOLiD.
- \nUsage:        ./simRRBS.py [options]
+ \nUsage:        RRBSsim.py [options]
  \nOptions:
  \nGeneral
     -h/--help	        Output help information.
