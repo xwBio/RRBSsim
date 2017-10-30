@@ -59,9 +59,9 @@ that it can be used to generate simulated Illumina reads.<br>
   
      To test pyfasta, type below commond in the console :<br>
       
-        $python
-        >>>import pyfasta
-        >>>quit()
+        $python<br>
+        >>>import pyfasta<br>
+        >>>quit()<br>
 
 3.Usage :
 =======
