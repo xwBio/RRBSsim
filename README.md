@@ -27,37 +27,40 @@ that it can be used to generate simulated Illumina reads.<br>
 * pIRS from: ftp://ftp.genomics.org.cn/pub/pIRS/
    1. Dependencies
    ===========
-   pIRS requires the following libraries(with *-devel packages) to compile:
-     zlib (http://www.zlib.net/)
-     Boost Libraries (http://www.boost.org/)
+   pIRS requires the following libraries(with *-devel packages) to compile:<br>
+     zlib (http://www.zlib.net/)<br>
+     Boost Libraries (http://www.boost.org/)<br>
    
-   pIRS requires the following tools to generate and analyse profiles:
-     Perl 5 (http://www.perl.org/)
-     Gzip (http://www.gnu.org/software/gzip/)
-     Gnuplot 4.4 (http://www.gnuplot.info/)
-     GNU Core Utilities (http://www.gnu.org/software/coreutils/)
-     SAM Tools (http://samtools.sourceforge.net/)
-   2. Building
-   ===========
-   The GNU Compiler Collection version 4.1 and above are needed. (http://gcc.gnu.org/)
-     make
-   All tools will be linked to top path after make.
-   You are free to use the following command to install them to /TARGET/PATH/ :
-      PREFIX=/TARGET/PATH/ make instal
+   pIRS requires the following tools to generate and analyse profiles:<br>
+     Perl 5 (http://www.perl.org/)<br>
+     Gzip (http://www.gnu.org/software/gzip/)<br>
+     Gnuplot 4.4 (http://www.gnuplot.info/)<br>
+     GNU Core Utilities (http://www.gnu.org/software/coreutils/)<br>
+     SAM Tools (http://samtools.sourceforge.net/)<br>
+   2. Building<br>
+   ===========<br>
+   The GNU Compiler Collection version 4.1 and above are needed. (http://gcc.gnu.org/)<br>
+   	
+       make<br>
+   All tools will be linked to top path after make.<br>
+   You are free to use the following command to install them to /TARGET/PATH/ :<br>
+   
+       PREFIX=/TARGET/PATH/ make instal<br>
 
-* [Python](http://www.python.org/download/) (Version 2.7 +)
+* [Python](http://www.python.org/download/) (Version 2.7 +)<br>
 
-  Type " python -V" to see the installed version.
+  Type " python -V" to see the installed version.<br>
   
-* [pyfasta](http://pypi.python.org/pypi/pyfasta/) package (Version 0.5.2)
-
-     tar -zxvf pyfasta-0.5.2.tar.gz
-     cd pyfasta-0.5.2
-     python setup.py install
-      To test pyfasta, type below commond in the console :
-       $python
-       >>>import pyfasta
-       >>>quit()
+* [pyfasta](http://pypi.python.org/pypi/pyfasta/) package (Version 0.5.2)<br>
+                                                                   
+        tar -zxvf pyfasta-0.5.2.tar.gz
+        cd pyfasta-0.5.2
+        python setup.py install
+  To test pyfasta, type below commond in the console :<br>
+      
+        $python
+        >>>import pyfasta
+        >>>quit()
 
 3.Usage :
 =======
