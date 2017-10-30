@@ -24,28 +24,28 @@ that it can be used to generate simulated Illumina reads.<br>
 
 * Linux/Unix or Mac OS platform
 
-* pIRS from: ftp://ftp.genomics.org.cn/pub/pIRS/
-   1. Dependencies
-   ===========
-   pIRS requires the following libraries(with *-devel packages) to compile:<br>
-     zlib (http://www.zlib.net/)<br>
-     Boost Libraries (http://www.boost.org/)<br>
+* pIRS from: ftp://ftp.genomics.org.cn/pub/pIRS/<br>
+   	1. Dependencies<br>
+   	===========<br>
+   	  pIRS requires the following libraries(with *-devel packages) to compile:<br>
+            zlib (http://www.zlib.net/)<br>
+            Boost Libraries (http://www.boost.org/)<br>
    
-   pIRS requires the following tools to generate and analyse profiles:<br>
-     Perl 5 (http://www.perl.org/)<br>
-     Gzip (http://www.gnu.org/software/gzip/)<br>
-     Gnuplot 4.4 (http://www.gnuplot.info/)<br>
-     GNU Core Utilities (http://www.gnu.org/software/coreutils/)<br>
-     SAM Tools (http://samtools.sourceforge.net/)<br>
-   2. Building<br>
-   ===========<br>
-   The GNU Compiler Collection version 4.1 and above are needed. (http://gcc.gnu.org/)<br>
+          pIRS requires the following tools to generate and analyse profiles:<br>
+     	    Perl 5 (http://www.perl.org/)<br>
+            Gzip (http://www.gnu.org/software/gzip/)<br>
+            Gnuplot 4.4 (http://www.gnuplot.info/)<br>
+            GNU Core Utilities (http://www.gnu.org/software/coreutils/)<br>
+            SAM Tools (http://samtools.sourceforge.net/)<br>
+ 	 2. Building<br>
+         ===========<br>
+           The GNU Compiler Collection version 4.1 and above are needed. (http://gcc.gnu.org/)<br>
    	
-       make<br>
-   All tools will be linked to top path after make.<br>
-   You are free to use the following command to install them to /TARGET/PATH/ :<br>
+              make<br>
+           All tools will be linked to top path after make.<br>
+           You are free to use the following command to install them to /TARGET/PATH/ :<br>
    
-       PREFIX=/TARGET/PATH/ make instal<br>
+              PREFIX=/TARGET/PATH/ make instal<br>
 
 * [Python](http://www.python.org/download/) (Version 2.7 +)<br>
 
