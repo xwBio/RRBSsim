@@ -56,7 +56,8 @@ that it can be used to generate simulated Illumina reads.<br>
         tar -zxvf pyfasta-0.5.2.tar.gz
         cd pyfasta-0.5.2
         python setup.py install
-  To test pyfasta, type below commond in the console :<br>
+  
+     To test pyfasta, type below commond in the console :<br>
       
         $python
         >>>import pyfasta
