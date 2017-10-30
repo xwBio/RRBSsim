@@ -25,12 +25,39 @@ that it can be used to generate simulated Illumina reads.<br>
 * Linux/Unix or Mac OS platform
 
 * pIRS from: ftp://ftp.genomics.org.cn/pub/pIRS/
+   1. Dependencies
+   ===========
+   pIRS requires the following libraries(with *-devel packages) to compile:
+     zlib (http://www.zlib.net/)
+     Boost Libraries (http://www.boost.org/)
+   
+   pIRS requires the following tools to generate and analyse profiles:
+     Perl 5 (http://www.perl.org/)
+     Gzip (http://www.gnu.org/software/gzip/)
+     Gnuplot 4.4 (http://www.gnuplot.info/)
+     GNU Core Utilities (http://www.gnu.org/software/coreutils/)
+     SAM Tools (http://samtools.sourceforge.net/)
+   2. Building
+   ===========
+   The GNU Compiler Collection version 4.1 and above are needed. (http://gcc.gnu.org/)
+     make
+   All tools will be linked to top path after make.
+   You are free to use the following command to install them to /TARGET/PATH/ :
+      PREFIX=/TARGET/PATH/ make instal
 
 * [Python](http://www.python.org/download/) (Version 2.7 +)
 
   Type " python -V" to see the installed version.
   
 * [pyfasta](http://pypi.python.org/pypi/pyfasta/) package (Version 0.5.2)
+
+     tar -zxvf pyfasta-0.5.2.tar.gz
+     cd pyfasta-0.5.2
+     python setup.py install
+      To test pyfasta, type below commond in the console :
+       $python
+       >>>import pyfasta
+       >>>quit()
 
 3.Usage :
 =======
