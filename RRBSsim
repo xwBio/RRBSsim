@@ -1679,7 +1679,7 @@ def main(argv):
         elif opt == '--multicore':
             cpus = int(arg)
         elif opt == '--seed':
-            seed = arg
+            seed = int(arg)
         elif opt == '-s' or opt == '--single_end':
             single_end = True
             paired_end = False
