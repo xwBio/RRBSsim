@@ -1931,9 +1931,13 @@ def main(argv):
                 sys.exit()
         elif opt == '--rand_quals':
             Dynamic_qual = True
+            input_quals = False
+            random_sequencing_errors = False
             print( "Boot the randomly introduce quality value!\n")
         elif opt == '--rand_error':
             random_sequencing_errors = True
+            input_quals = False
+            Dynamic_qual = False
             print("Randomly introduce sequencing errors by sequencing quality value!\n")
         elif opt == '--qs':
             qual_sigma = float(arg)
