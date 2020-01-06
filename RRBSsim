@@ -14,8 +14,9 @@
 #        NOTES:  It is modified from the software BSSim,thanks for their source codes.
 #       AUTHOR:  Xiwei Sun, xwsun@zju.edu.cn
 #      COMPANY:  Sir Run Run Shaw Hospital and Institute of Translational Medicine, Zhejiang University
-#      VERSION:  0.1.0
+#      VERSION:  0.1.3
 #      CREATED:  2017/6/3
+#      UPDATED： 2020/1/6
 #     REVISION:  ---
 # ==============================================================================================================
 import time
