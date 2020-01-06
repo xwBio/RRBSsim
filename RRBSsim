@@ -986,11 +986,11 @@ def create_reads_for_input_or_random_snp(ref, ref_start, cut_site, end_repair_fo
                 # output to files
                 if paired_end:
                     output(SAM, SAMW, SAMC, paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom,
-                           reads1, strand1, start1, end1, reads2, strand2, start2, end2, out, position, index, qual_mu,
+                           reads1, strand1, start1, end1, reads2, strand2, start2, end2, i, out, position, index, qual_mu,
                            qual_sigma, random_sequencing_errors, end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals)
                 else:
                     output(SAM, SAMW, SAMC,paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom,
-                           reads1, strand1, start1, end1, '', '', '', '', out, position, index, qual_mu, qual_sigma,
+                           reads1, strand1, start1, end1, i, '', '', '', '', out, position, index, qual_mu, qual_sigma,
                            random_sequencing_errors, end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals)
         elif non_adapter:
             for i in range(0, reads_depth):
@@ -1004,11 +1004,11 @@ def create_reads_for_input_or_random_snp(ref, ref_start, cut_site, end_repair_fo
                 # output to files
                 if paired_end:
                     output(SAM, SAMW, SAMC, paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom,
-                           reads1, strand1, start1, end1, reads2, strand2, start2, end2, out, position, index, qual_mu,
+                           reads1, strand1, start1, end1, reads2, strand2, start2, end2, i, out, position, index, qual_mu,
                            qual_sigma, random_sequencing_errors, end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals)
                 else:
                     output(SAM, SAMW, SAMC,paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom,
-                           reads1, strand1, start1, end1, '', '', '', '', out, position, index, qual_mu, qual_sigma,
+                           reads1, strand1, start1, end1, i, '', '', '', '', out, position, index, qual_mu, qual_sigma,
                            random_sequencing_errors, end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals)
         
         else:
@@ -1027,11 +1027,11 @@ def create_reads_for_input_or_random_snp(ref, ref_start, cut_site, end_repair_fo
                 # output to files
                 if paired_end:
                     output(SAM, SAMW, SAMC, paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom,
-                           reads1, strand1, start1, end1, reads2, strand2, start2, end2, out, position, index, qual_mu,
+                           reads1, strand1, start1, end1, reads2, strand2, start2, end2, i, out, position, index, qual_mu,
                            qual_sigma, random_sequencing_errors, end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals)
                 else:
                     output(SAM, SAMW, SAMC,paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom,
-                           reads1, strand1, start1, end1, '', '', '', '', out, position, index, qual_mu, qual_sigma,
+                           reads1, strand1, start1, end1, i, '', '', '', '', out, position, index, qual_mu, qual_sigma,
                            random_sequencing_errors, end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals)
     if technology == 'Solexa':
         FQ1.close()
@@ -1170,7 +1170,7 @@ def cut_sequence(ref, ref_start, num_site, cut_seq, cut_index, cut_position, fra
 
 
 def output(SAM, SAMW, SAMC, paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, QUALS_R2, technology, chrom, reads1, strand1,
-           start1, end1, reads2, strand2, start2, end2, out, position, index, qual_mu, qual_sigma, random_sequencing_errors,
+           start1, end1, reads2, strand2, start2, end2, i, out, position, index, qual_mu, qual_sigma, random_sequencing_errors,
            end_part, end_part_sigma, end_qual, end_qual_sigma, dynamic_qual, input_quals, first_qual_R1, first_qual_R2, matrix_qual_R1, matrix_qual_R2, phred33_quals, phred64_quals):  # add quality values
             if input_quals:
                 #(reads1, qual1) = input_quality(reads1, random_sequencing_errors, first_qual_R1, matrix_qual_R1, phred33_quals, phred64_quals)
@@ -1189,10 +1189,10 @@ def output(SAM, SAMW, SAMC, paired_end, FQ1, FQ2, READS_R1, QUALS_R1, READS_R2, 
                 qual1 = [qual_mu * 40] * len(reads1)
                 qual2 = [qual_mu * 40] * len(reads2)
             if technology == 'Solexa':
-                output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, reads1, strand1, start1, end1, reads2, strand2, start2, end2, out, position, index, phred33_quals, phred64_quals)
+                output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, reads1, strand1, start1, end1, reads2, strand2, start2, end2, i, out, position, index, phred33_quals, phred64_quals)
 
 
-def output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, reads1, strand1, start1, end1, reads2, strand2, start2, end2, out, position, index, phred33_quals, phred64_quals):
+def output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, reads1, strand1, start1, end1, reads2, strand2, start2, end2, i, out, position, index, phred33_quals, phred64_quals):
     seq_id = ':1' + ':2102' + ':' + str(random.randint(1, 99999)) + ':' + str(random.randint(1, 99999))
     quality1 = [""] * len(qual1)
     if phred33_quals:
@@ -1203,7 +1203,7 @@ def output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, re
             quality1[i] = chr(int(qual1[i]) + 64)
     quality1 = "".join(quality1)
     if position:
-        first = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + seq_id + '/1'
+        first = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + i + seq_id + '/1'
     else:
         first = 'DF94KKQ1:316:D04NRACXX' + seq_id + ' ' + '1:N:0:' + index
     FQ1.write('@' + first + '\n' + reads1 + '\n' + '+' + '\n' + quality1 + '\n')
@@ -1218,7 +1218,7 @@ def output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, re
                 quality2[i] = chr(int(qual2[i]) + 64)
         quality2 = "".join(quality2)
         if position:
-            second = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + seq_id + '/2'
+            second = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + i + seq_id + '/2'
         else:
             second = 'DF94KKQ1:316:D04NRACXX' + seq_id + ' ' + '2:N:0:' + index
         FQ2.write('@' + second + '\n' + reads2 + '\n' + '+' + '\n' + quality2 + '\n')
@@ -1543,7 +1543,7 @@ that it can be used to generate simulated Illumina reads.
                         here,at most two cutting sites are supported and they must separated by comma (,); Default is 'C-CGG'.
 
     -o/--output	        Prefix of output file. Default is set by name of input file.
-    -P/--PosInfo	    Output position information into the output file. Default is not.
+    --nPosInfo	    Output position information into the output file. Default is true.
     --SAM	            Output alignment results in SAM format. Default is not.
     -R/--ref_methInfo	Output the reference methylation information. Default is not.
                         format is:
@@ -1648,7 +1648,7 @@ def main(argv):
     mCG_sigma = mCHG_sigma = mCHH_sigma = mC_sigma = 0.01
     directional = False
     out = ''
-    position = False
+    position = True
     non_snp = True
     p1 = 0.0005  # homozygote
     p2 = 0.001  # heterozygote
@@ -1671,10 +1671,10 @@ def main(argv):
  #   ref_file = "D:\\simRRBS_re\\test\\chr21_1.fa"
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "hf:d:l:spt:e:o:PvRS:q",
+        opts, args = getopt.getopt(sys.argv[1:], "hf:d:l:spt:e:o:vRS:q",
                                    ["help", "fasta=", "genome_folder=", "multicore=", "seed=", "length=", "single_end",
                                     "pair_end", "non_directional", "cut_site=", "min=", "max=", "adapter1=", "cr=",
-                                    "adapter2=", "non_meth_adapter", "non_meth_end_repair_bases", "non_adapter","output=", "PosInfo",
+                                    "adapter2=", "non_meth_adapter", "non_meth_end_repair_bases", "non_adapter","output=", "nPosInfo",
                                     "SAM", "version", "ref_methInfo", "ml=", "CG_level=", "CHG_level=", "CHH_level=", "mr=", "CG_rate=",
                                     "CHG_rate=", "CHH_rate=", "mC_ml=", "mCG_level=", "mCHG_level=", "mCHH_level=",
                                     "mCS=", "mCGS=", "mCHGS=", "mCHHS=", "ep=", "eps=", "eq=", "es=", "non_SNP",
@@ -1775,8 +1775,8 @@ def main(argv):
             max_err = int(arg)
         elif opt == '-o' or opt == '--output':
             out = arg
-        elif opt == '-P' or opt == 'PosInfo':
-            position = True
+        elif opt == 'nPosInfo':
+            position = False
         elif opt == '--non_directional':
             directional = False
             print( "Simulate the non_directional reads!")
