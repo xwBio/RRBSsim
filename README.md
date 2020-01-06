@@ -98,7 +98,7 @@ that it can be used to generate simulated Illumina reads.<br>
 					'C-CGG';here,at most two cutting sites are supported and they must separated by comma (,);
 					Default is 'C-CGG'.
 		-o/--output	        Prefix of output file. Default is set by name of input file.
-		-P/--PosInfo	    	Output position information into the output file. Default is not.
+		--nPosInfo	    	Output position information into the output file. Default is True.
 		--SAM	            	Output alignment results in SAM format. Default is not.
 		-R/--ref_methInfo	Output the reference methylation information. Default is not.
 		
