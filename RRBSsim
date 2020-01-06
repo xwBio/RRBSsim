@@ -16,6 +16,7 @@
 #      COMPANY:  Sir Run Run Shaw Hospital and Institute of Translational Medicine, Zhejiang University
 #      VERSION:  0.1.0
 #      CREATED:  2017/6/3
+#      UPDATED:  2020/1/6
 #     REVISION:  ---
 # ==============================================================================================================
 import time
@@ -1803,7 +1804,7 @@ def main(argv):
         elif opt == '--SAM':
             SAM = True
         elif opt == '-v' or opt == '--version':
-            print("Program: RRBSsim\nVersion: 0.1.0\n")
+            print("Program: RRBSsim\nVersion: 0.1.3\n")
             sys.exit()
         elif opt == '--cr':
             conversion_rate = float(arg)
