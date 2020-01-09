@@ -1204,7 +1204,7 @@ def output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, re
             quality1[i] = chr(int(qual1[i]) + 64)
     quality1 = "".join(quality1)
     if position:
-        first = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + i + seq_id + '/1'
+        first = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + str(i) + seq_id + '/1'
     else:
         first = 'DF94KKQ1:316:D04NRACXX' + seq_id + ' ' + '1:N:0:' + index
     FQ1.write('@' + first + '\n' + reads1 + '\n' + '+' + '\n' + quality1 + '\n')
@@ -1219,7 +1219,7 @@ def output_solexa(SAM, SAMW, SAMC, paired_end, FQ1, qual1, FQ2, qual2, chrom, re
                 quality2[i] = chr(int(qual2[i]) + 64)
         quality2 = "".join(quality2)
         if position:
-            second = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + i + seq_id + '/2'
+            second = chrom + '.' + str(start1) + '-' + str(end1) + '.' + strand1 + str(start2) + '-' + str(end2) + '.' + strand2 + str(i) + seq_id + '/2'
         else:
             second = 'DF94KKQ1:316:D04NRACXX' + seq_id + ' ' + '2:N:0:' + index
         FQ2.write('@' + second + '\n' + reads2 + '\n' + '+' + '\n' + quality2 + '\n')
